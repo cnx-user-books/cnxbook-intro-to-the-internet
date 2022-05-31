@@ -1,0 +1,91 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+
+  <title>Message Routing</title>
+
+  <metadata>
+  <md:content-id>m0076</md:content-id><md:title>Message Routing</md:title>
+  <md:abstract>The key to the efficiency of a network is good message routing.</md:abstract>
+  <md:uuid>acaf2e09-68e7-4f30-9474-72de1221f23d</md:uuid>
+</metadata>
+
+<content>    
+    <para id="para1">
+      Focusing on electrical networks, most analog ones make
+      inefficient use of communication links because truly dynamic
+      routing is difficult, if not impossible, to obtain. In radio
+      networks, such as commercial television, each station has a
+      dedicated portion of the electromagnetic spectrum, and this
+      spectrum cannot be shared with other stations or used in any
+      other than the regulated way. The telephone network is more
+      dynamic, but once it establishes a call the path through the
+      network is fixed. The users of that path control its use, and
+      may not make efficient use of it (long pauses while one person
+      thinks, for example). Telephone network customers would be quite
+      upset if the telephone company momentarily disconnected the path
+      so that someone else could use it. This kind of connection
+      through a network—fixed for the duration of the
+      communication session—is known as a
+      <term>circuit-switched</term> connection.
+    </para>
+
+    
+    <para id="para2">
+      During the 1960s, it was becoming clear that not only was
+      digital communication technically superior, but also that the
+      wide variety of communication modes—computer login, file
+      transfer, and electronic mail—needed a different approach
+      than point-to-point.  The notion of computer networks was born
+      then, and what was then called the ARPANET, now called the
+      Internet, was born. Computer networks elaborate the basic
+      network model by subdividing messages into smaller chunks called
+      <term>packets</term> (<link target-id="packet" strength="3"/>). The
+      rationale for the network enforcing smaller transmissions was
+      that large file transfers would consume network resources all
+      along the route, and, because of the long transmission time, a
+      communication failure might require retransmission of the entire
+      file. By creating packets, each of which has its own address and
+      is routed independently of others, the network can better manage
+      congestion. The analogy is that the postal service, rather than
+      sending a long letter in the envelope you provide, opens the
+      envelope, places each page in a separate envelope, and using the
+      address on your envelope, addresses each page's envelope
+      accordingly, and mails them separately. The network does need to
+      make sure packet sequence (page numbering) is maintained, and
+      the network exit point must reassemble the original message
+      accordingly.
+    </para>
+
+    <figure id="packet" orient="horizontal">
+      <media id="id1167056743318" alt="">
+        <image src="../../media/sys26.png" mime-type="image/png"/>
+        <image for="pdf" src="../../media/sys26.eps" mime-type="application/postscript"/>
+      </media>
+      <caption>
+      Long messages, such as files, are broken into separate packets,
+      then transmitted over computer networks. A packet, like a
+      letter, contains the destination address, the return address
+      (transmitter address), and the data.  The data includes the
+      message part and a sequence number identifying its order in the
+      transmitted message.
+      </caption>
+    </figure>
+
+    <para id="para3">
+      Communications networks are now categorized according to whether
+      they use packets or not. A system like the telephone network is
+      said to be <term>circuit switched</term>: The network
+      establishes a <term>fixed</term> route that lasts the
+      entire duration of the message. Circuit switching has the
+      advantage that once the route is determined, the users can use
+      the capacity provided them however they like. Its main
+      disadvantage is that the users may not use their capacity
+      efficiently, clogging network links and nodes along the way.
+      <term>Packet-switched</term> networks continuously monitor
+      network utilization, and route messages accordingly. Thus,
+      messages can, on the average, be delivered efficiently, but the
+      network cannot guarantee a specific amount of capacity to the
+      users.
+    </para>
+    
+  </content>
+</document>

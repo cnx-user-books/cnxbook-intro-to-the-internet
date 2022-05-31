@@ -1,0 +1,128 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Communication Protocols</title>
+
+  <metadata>
+  <md:content-id>m0080</md:content-id><md:title>Communication Protocols</md:title>
+  <md:abstract>The layers of protocol in computer networks.</md:abstract>
+  <md:uuid>0acd2878-42e9-4df8-a429-e7e86f42569e</md:uuid>
+</metadata>
+
+<content>
+
+
+    <para id="ProtocolsIntro"> The complexity of information
+      transmission in a computer network—reliable transmission
+      of bits across a channel, routing, and directing information to
+      the correct destination within the destination computers
+      operating system—demands an overarching concept of how to
+      organize information delivery. No unique set of rules satisfies
+      the various constraints communication channels and network
+      organization place on information transmission. For example,
+      random access issues in Ethernet are not present in wide-area
+      networks such as the Internet. A <term>protocol </term>is a set
+      of rules that governs how information is delivered. For example,
+      to use the telephone network, the protocol is to pick up the
+      phone, listen for a dial tone, dial a number having a specific
+      number of digits, wait for the phone to ring, and say hello.  In
+      radio, the station uses amplitude or frequency modulation with a
+      specific carrier frequency and transmission bandwidth, and you
+      know to turn on the radio and tune in the station. In technical
+      terms, no one protocol or set of protocols can be used for any
+      communication situation. Be that as it may, communication
+      engineers have found that a common thread runs through the
+      <emphasis>organization </emphasis>of the various protocols. This
+      grand design of information transmission organization runs
+      through all modern networks today.  </para>
+
+    <para id="NetworkProtocols"> What has been defined as a networking
+      standard is a layered, hierarchical protocol organization. As
+      shown in <link target-id="protocol" strength="2"/>, protocols are
+      organized by function and level of detail.
+    <figure id="protocol">
+      <title>Protocol Picture</title>
+      <media id="id2809394" alt="">
+        <image src="../../media/sys27.png" mime-type="image/png"/>
+        <image for="pdf" src="../../media/sys27.eps" mime-type="application/postscript"/>
+      </media>
+      <caption>
+	Protocols are organized according to the level of detail
+	required for information transmission.  Protocols at the lower
+	levels (shown toward the bottom) concern reliable bit
+	transmission.  Higher level protocols concern how bits are
+	organized to represent information, what kind of information
+	is defined by bit sequences, what software needs the
+	information, and how the information is to be interpreted.
+	Bodies such as the IEEE (Institute for Electronics and
+	Electrical Engineers) and the ISO (International Standards
+	Organization) define standards such as this. Despite being a
+	standard, it does not constrain protocol implementation so
+	much that innovation and competitive individuality are ruled
+	out.
+      </caption>
+    </figure>
+      Segregation of information transmission, manipulation, and
+      interpretation into these categories directly affects how
+      communication systems are organized, and what role(s) software
+      systems fulfill. Although not thought about in this way in
+      earlier times, this organizational structure governs the way
+      communication engineers think about all communication systems,
+      from radio to the Internet.
+    </para>
+
+    <exercise id="exer1">
+      <problem id="id1171476693519">
+	<para id="exer1a">
+	  How do the various aspects of establishing and
+	  maintaining a telephone conversation fit into this layered protocol
+	  organization?
+	</para>
+      </problem>
+      <solution id="id1171479160243">
+	<para id="exer1b">
+	  When you pick up the telephone, you initiate a dialog with
+	  your network interface by dialing the number. The network
+	  looks up where the destination corresponding to that number
+	  is located, and routes the call accordingly. The route
+	  remains fixed as long as the call persists. What you say
+	  amounts to high-level protocol while establishing the
+	  connection and maintaining it corresponds to low-level
+	  protocol.
+	</para>
+      </solution>
+    </exercise>
+    
+    <para id="layer">
+      We now explicitly state whether we are working in the physical
+      layer (signal set design, for example), the data link layer
+      (source and channel coding), or any other layer. IP abbreviates
+      Internet protocol, and governs gateways (how information is
+      transmitted between networks having different internal
+      organizations). TCP (transmission control protocol) governs how
+      packets are transmitted through a wide-area network such as the
+      Internet. Telnet is a protocol that concerns how a person at one
+      computer logs on to another computer across a network. A
+      moderately high level protocol such as telnet, is not concerned
+      with what data links (wireline or wireless) might have been used
+      by the network or how packets are routed. Rather, it establishes
+      connections between computers and directs each byte (presumed to
+      represent a typed character) to the appropriate operation system
+      component at each end. It is <emphasis>not </emphasis>concerned
+      with what the characters mean or what programs the person is
+      typing to. That aspect of information transmission is left to
+      protocols at higher layers.
+    </para>
+
+    <para id="w3Protocols">
+      Recently, an important set of protocols created the World Wide
+      Web. These protocols exist independently of the Internet. The
+      Internet insures that messages are transmitted efficiently and
+      intact; the Internet is not concerned (to date) with what
+      messages contain. HTTP (hypertext transfer protocol) frame what
+      messages contain and what should be done with the data. The
+      extremely rapid development of the Web on top of an essentially
+      stagnant Internet is but one example of the power of organizing
+      how information transmission occurs without overly constraining
+      the details.  </para>
+
+  </content>
+</document>
